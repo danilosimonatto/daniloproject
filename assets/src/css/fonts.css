@@ -1,0 +1,16 @@
+/*
+set all needed fonts
+Like:
+
+@font-face {
+    font-family: 'space-mono';
+    src: url('../fonts/SpaceMono-Regular-webfont.woff') format('woff');
+}
+
+----------------------------------------------------------------------
+
+then use this on all the other css
+
+@import url('fonts.css');
+
+*/
