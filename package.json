@@ -10,7 +10,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf node_modules/.cache lib assets/dist",
     "dev": "webpack --mode development",
-    "prod": "webpack --mode production"
+    "prod": "webpack --mode production",
+    "watch-webpack": "webpack --watch --mode development",
+    "browsersync": "browser-sync start --proxy 'http://localhost:8888/test-oggi' --files '**/*' --no-notify",
+    "watch": "npm run watch-webpack & npm run browsersync"
   },
   "devDependencies": {
     "@babel/core": "^7.23.2",

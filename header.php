@@ -24,7 +24,7 @@
                     <div class="col col--lg-3 col--md-3 col--sm-6 col--xs-6">
                         <a href="<?php echo get_bloginfo( 'url' ); ?>" class="header__logo">
                             <?php echo is_front_page() ? '<h1>' : ''; ?>
-                                <img src="<?php echo get_bloginfo( 'stylesheet_directory' ); ?>/img/logo.svg" alt="<?php echo get_bloginfo( 'title' ); ?>" />
+                                <img src="<?php echo get_bloginfo( 'stylesheet_directory' ); ?>/assets/dist/images/logo.svg" alt="<?php echo get_bloginfo( 'title' ); ?>" />
                             <?php echo is_front_page() ? '</h1>' : ''; ?>
                         </a>
                     </div>
