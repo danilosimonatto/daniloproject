@@ -2,8 +2,8 @@ const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
-const ImageminWebpWebpackPlugin= require("imagemin-webp-webpack-plugin");
-
+const ImageminWebpWebpackPlugin = require("imagemin-webp-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 
 const config = {
   entry: {
@@ -27,7 +27,7 @@ const config = {
       },
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
+        use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
       },
       {
         test: /\.(jpe?g|png|svg)$/i,
@@ -39,6 +39,7 @@ const config = {
     ],
   },
   optimization: {
+    minimize: true,
     minimizer: [
       new CssMinimizerPlugin(),
       new ImageMinimizerPlugin({
@@ -55,7 +56,11 @@ const config = {
       }),
     ],
   },
-  plugins:[new MiniCssExtractPlugin(), new ImageminWebpWebpackPlugin()],
+  plugins: [
+    new TerserPlugin(),
+    new MiniCssExtractPlugin(),
+    new ImageminWebpWebpackPlugin()
+  ],
 };
 
 module.exports = config;
