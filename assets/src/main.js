@@ -8,6 +8,7 @@ import './js/costum-scripts';
 
 // importing css
 import './css/fonts.css';
+import './css/costum.css';
 
 //importing images (png, jpg, svg)
  function importAll(r) {

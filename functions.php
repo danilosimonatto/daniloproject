@@ -75,7 +75,7 @@ function daniloproject_enqueue_scripts() {
     
     // dist
     wp_enqueue_style( 'styles-bundle', get_stylesheet_directory_uri() . '/assets/dist/main.css?' . filemtime( get_stylesheet_directory() . '/assets/dist/main.css' ) );
-    wp_enqueue_script( 'scripts-bundle', get_stylesheet_directory_uri() . '/assets/dist/bundle.js?' . filemtime( get_stylesheet_directory() . '/assets/dist/bundle.js' ), [], null, true );
+    wp_enqueue_script( 'scripts-bundle', get_stylesheet_directory_uri() . '/assets/dist/main.bundle.js?' . filemtime( get_stylesheet_directory() . '/assets/dist/main.bundle.js' ), [], null, true );
 }
 
 add_action( 'wp_enqueue_scripts', 'daniloproject_enqueue_scripts' );

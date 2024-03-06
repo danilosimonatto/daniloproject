@@ -2,7 +2,7 @@
   "name": "daniloproject",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -12,7 +12,7 @@
     "dev": "webpack --mode development",
     "prod": "webpack --mode production",
     "watch-webpack": "webpack --watch --mode development",
-    "browsersync": "browser-sync start --proxy 'http://localhost:8888/test-oggi' --files '**/*' --no-notify",
+    "browsersync": "browser-sync start --proxy 'https://daniloproject.local:8890' --files '**/*' --no-notify --browser 'firefox developer edition'",
     "watch": "npm run watch-webpack & npm run browsersync"
   },
   "devDependencies": {

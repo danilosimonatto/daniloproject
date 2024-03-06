@@ -3,8 +3,11 @@ set all needed fonts
 Like:
 
 @font-face {
-    font-family: 'space-mono';
-    src: url('../fonts/SpaceMono-Regular-webfont.woff') format('woff');
+    font-family: 'larken-bold';
+    font-style: normal;
+    font-display: swap;
+    src: url('../fonts/Larken-Bold.woff') format('woff'),
+         url('../fonts/Larken-Bold.woff2') format('woff2');
 }
 
 ----------------------------------------------------------------------

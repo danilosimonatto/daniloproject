@@ -7,11 +7,11 @@ const TerserPlugin = require("terser-webpack-plugin");
 
 const config = {
   entry: {
-    main: './assets/src/main.js'
+    main: './assets/src/main.js',
   },
   output: {
     path: path.resolve(__dirname, 'assets/dist'),
-    filename: 'bundle.js'
+    filename: '[name].bundle.js' // Change here
   },
   module: {
     rules: [
